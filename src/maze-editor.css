@@ -1,0 +1,61 @@
+.editor-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.9);
+  z-index: 110;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.editor-modal {
+  background: #222;
+  color: #ffe600;
+  padding: 1rem;
+  border-radius: 10px;
+  min-width: 300px;
+  max-width: 95%;
+  box-shadow: 0 4px 32px #000a;
+  text-align: center;
+}
+
+.maze-grid {
+  display: inline-block;
+  margin-bottom: 1rem;
+  overflow: auto;
+  max-height: 60vh;
+}
+
+.maze-row {
+  display: flex;
+}
+
+.maze-cell {
+  width: 24px;
+  height: 24px;
+  font-size: 12px;
+  border: 1px solid #ffe600;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cell-0 { background: #002; color: #fff; } /* Wall */
+.cell-1 { background: #111; color: #ffe600; } /* Pellet */
+.cell-2 { background: #111; color: #ff0; } /* Power pellet */
+.cell-3 { background: #111; color: #000; } /* Empty */
+.cell-4 { background: #300; color: #f00; } /* Ghost start */
+
+@media (max-width: 400px) {
+  .maze-cell {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+  }
+}

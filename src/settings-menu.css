@@ -1,0 +1,54 @@
+.settings-modal {
+  background: #222;
+  color: #ffe600;
+  padding: 1.5rem;
+  border-radius: 10px;
+  max-width: 90%;
+  width: 400px;
+  box-shadow: 0 4px 32px #000a;
+  text-align: center;
+}
+
+.setting-group {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.setting-group label {
+  margin-right: 1rem;
+}
+
+.setting-group select {
+  padding: 0.5rem;
+  font-family: 'Press Start 2P';
+  background: #333;
+  color: #ffe600;
+  border: 1px solid #ffe600;
+}
+
+.maze-gallery {
+  margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.maze-gallery button {
+  min-width: 100px;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .settings-modal {
+    padding: 1rem;
+    width: 90%;
+  }
+  
+  .setting-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

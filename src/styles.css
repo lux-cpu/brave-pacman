@@ -1,0 +1,187 @@
+body {
+  background: #000;
+  color: #fff;
+  font-family: 'Press Start 2P', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.canvas-container {
+  position: relative;
+  margin: 1rem 0;
+}
+
+canvas {
+  background: #000;
+  display: block;
+  margin: 0 auto;
+  border: 2px solid #ffe600;
+}
+
+.score-bar {
+  width: 100%;
+  max-width: 448px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  margin: 0 auto 1rem auto;
+  letter-spacing: 1px;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.settings-btn {
+  background: #ffe600;
+  margin-left: 1rem;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lives-display {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1rem;
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.9);
+  color: #fff;
+  z-index: 100;
+  padding: 1rem;
+}
+
+.settings-modal, .editor-modal {
+  background: #222;
+  color: #ffe600;
+  padding: 1.5rem;
+  border-radius: 10px;
+  max-width: 90%;
+  width: 400px;
+  box-shadow: 0 4px 32px #000a;
+  text-align: center;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.setting-group {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.setting-group label {
+  margin-right: 1rem;
+}
+
+.setting-group select {
+  padding: 0.5rem;
+  font-family: 'Press Start 2P';
+  background: #333;
+  color: #ffe600;
+  border: 1px solid #ffe600;
+}
+
+.high-score-table {
+  width: 100%;
+  margin: 1rem 0;
+  border-collapse: collapse;
+}
+
+.high-score-table td {
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.high-score-table .score-value {
+  text-align: right;
+}
+
+.high-score-input {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Press Start 2P';
+  margin: 1rem 0;
+  padding: 0.5rem;
+  background: #333;
+  color: #ffe600;
+  border: 2px solid #ffe600;
+  width: 5rem;
+}
+
+button {
+  font-family: 'Press Start 2P';
+  padding: 0.5rem 1rem;
+  background: #ffe600;
+  color: #222;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  margin: 0.5rem;
+}
+
+button:hover {
+  background: #fff200;
+}
+
+.maze-gallery {
+  margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.maze-gallery button {
+  min-width: 100px;
+}
+
+@media (max-width: 600px) {
+  .score-bar {
+    font-size: 0.8rem;
+  }
+  
+  .settings-modal, .editor-modal {
+    padding: 1rem;
+    width: 90%;
+  }
+  
+  button {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
